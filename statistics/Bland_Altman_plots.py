@@ -117,7 +117,7 @@ def run_bland_altman_plot(csv_path, value_suffix, model, dataset, title_label, y
 #%% Automatica oppervlakte
 
 run_bland_altman_plot(
-    csv_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/automatica/area_automatica_b2_12juni.csv',
+    csv_path = path...,
     model='AutoMATiCA',
     dataset='B2',
     value_suffix='mm2',
@@ -130,7 +130,7 @@ run_bland_altman_plot(
 #%% Compositia oppervlakte
 
 run_bland_altman_plot(
-    csv_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia/area_compo_b2_12juni.csv',
+    csv_path = path...,
     model='CompositIA',
     dataset='B2',
     value_suffix='mm2',
@@ -143,7 +143,7 @@ run_bland_altman_plot(
 #%% Automatica weefseldichtheid
 
 run_bland_altman_plot(
-    csv_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/automatica/hu_automatica_b2_12juni.csv',
+    csv_path = path...,
     model='AutoMATiCA',
     dataset='B2',
     value_suffix='hu',
@@ -156,7 +156,7 @@ run_bland_altman_plot(
 #%% Compositia oppervlakte 
 
 run_bland_altman_plot(
-    csv_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia/hu_compo_b2_12juni.csv',
+    csv_path = path ...,
     model='CompositIA',
     dataset='B2', 
     value_suffix='hu',
