@@ -156,15 +156,14 @@ def plot_dsc_statistics(df, dataset_name):
 
 #%% Dataset A
 
-base_path_a = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_splits\a'
-
+base_path_a = path...
 df_results_a = process_chunks(base_path_a, 12)
 plot_dsc_statistics(df_results_a, 'dataset A')
 
 
 #%% Dataset B1
 
-base_path_b_b1 = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_splits\b\b1'
+base_path_b_b1 = path...
 
 df_results_b_b1 = process_chunks(base_path_b_b1, 1)
 plot_dsc_statistics(df_results_b_b1, 'dataset B1')
@@ -172,33 +171,9 @@ plot_dsc_statistics(df_results_b_b1, 'dataset B1')
 
 #%% Dataset B2
 
-base_path_b_b2 = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_splits\b\b2'
+base_path_b_b2 = path...
 
 df_results_b_b2 = process_chunks(base_path_b_b2, 1)
 plot_dsc_statistics(df_results_b_b2, 'dataset B2')
 
 
-
-#%% Plot 
-
-plot_dsc_statistics(df_results_a, 'dataset A')
-plot_dsc_statistics(df_results_b_b1, 'dataset B1')
-plot_dsc_statistics(df_results_b_b2, 'dataset B2')
-plot_dsc_statistics(df_results_c_c1, 'dataset C1')
-plot_dsc_statistics(df_results_c_c2, 'dataset C2')
-
-
-
-#%%
-
-# print(df_results_a)
-# print(df_results_b_b1)
-# print(df_results_b_b2)
-# print(df_results_c_c1)
-# print(df_results_c_c2)
-
-# df_results_a.to_csv('df_results_a.csv', index=False)
-# df_results_b_b1.to_csv('df_results_b_b1.csv', index=False)
-# df_results_b_b2.to_csv('df_results_b_b2.csv', index=False)
-# df_results_c_c1.to_csv('df_results_c_c1.csv', index=False)
-# df_results_c_c2.to_csv('df_results_c_c2.csv', index=False)
