@@ -1,4 +1,5 @@
 # Validatie van automatische modellen voor segmentatie van de lichaamssamenstelling op L3
+#### KTO-AS24029 Lichaamssamenstelling-LUMC 24020
 
 In deze repository zijn de Python-scripts te vinden die gebruikt zijn voor het extraheren en vergelijken van de segmentatiemodellen **AutoMATiCA** en **CompositIA**.
 
