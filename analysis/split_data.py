@@ -1,0 +1,70 @@
+import os
+import random
+import shutil
+
+# Input directories
+input_tagged = 
+input_ori = 
+
+# Output base directory
+output_base = 
+split_sizes = {'a': x, 'b': x}
+
+# Output structure
+output_dirs = {
+    split: {
+        'tagged_manual': os.path.join(output_base, split, 'tagged_manual'),
+        'original_l3': os.path.join(output_base, split, 'original_l3')
+    }
+    for split in split_sizes
+}
+
+# Create output folders
+for dirs in output_dirs.values():
+    os.makedirs(dirs['tagged_manual'], exist_ok=True)
+    os.makedirs(dirs['original_l3'], exist_ok=True)
+
+# Gather all valid pairs (base name → file paths)
+tagged_files = [f for f in os.listdir(input_tagged) if f.endswith('.tag')]
+ori_files = os.listdir(input_ori)
+
+# Map basename to full filename for ori
+ori_map = {}
+for f in ori_files:
+    base, ext = os.path.splitext(f)
+    if base not in ori_map:  # first match wins
+        ori_map[base] = f
+
+# Build valid pairs: only include if both .tag and original file exist
+valid_pairs = []
+for tag_file in tagged_files:
+    base = os.path.splitext(tag_file)[0]
+    if base in ori_map:
+        valid_pairs.append((base, tag_file, ori_map[base]))
+    
+
+print(f"Found {len(valid_pairs)} valid base file pairs")
+
+# Sanity check
+total_required = sum(split_sizes.values())
+if len(valid_pairs) < total_required:
+    raise ValueError(f"Only {len(valid_pairs)} matching file pairs found, but {total_required} needed.")
+
+# Shuffle and split
+random.seed(42)
+random.shuffle(valid_pairs)
+
+# Split exact counts
+split_indices = {
+    'a': valid_pairs[:split_sizes['b2val']],
+    'b': valid_pairs[split_sizes['a']:split_sizes['a'] + split_sizes['b']],
+}
+
+# Copy files
+for split, records in split_indices.items():
+    for base, tag_file, ori_file in records:
+        shutil.copy2(os.path.join(input_tagged, tag_file), os.path.join(output_dirs[split]['tagged_manual'], tag_file))
+        shutil.copy2(os.path.join(input_ori, ori_file), os.path.join(output_dirs[split]['original_l3'], ori_file))
+    print(f"Copied {len(records)} pairs to split '{split}'")
+
+print("Dataset successfully split into b2val, b2train.")
