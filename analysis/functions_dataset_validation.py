@@ -161,8 +161,6 @@ base_path_a = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_splits\a
 df_results_a = process_chunks(base_path_a, 12)
 plot_dsc_statistics(df_results_a, 'dataset A')
 
-# plot_segmentation(base_path_a, "EE005E45", "chunk_001")
-# print(get_dsc_for_scan(base_path_a, "EE005E45", "chunk_001"))
 
 #%% Dataset B1
 
@@ -171,8 +169,6 @@ base_path_b_b1 = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_split
 df_results_b_b1 = process_chunks(base_path_b_b1, 1)
 plot_dsc_statistics(df_results_b_b1, 'dataset B1')
 
-# th_b_b1, "EECFD59B", "chunk_001")
-# print(get_dsc_for_scan(base_path_b_b1, "EECFD59B", "chunk_001"))
 
 #%% Dataset B2
 
@@ -181,31 +177,6 @@ base_path_b_b2 = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_split
 df_results_b_b2 = process_chunks(base_path_b_b2, 1)
 plot_dsc_statistics(df_results_b_b2, 'dataset B2')
 
-# plot_segmentation(base_path_b_b2, "EEEEC10A", "chunk_004")
-# print(get_dsc_for_scan(base_path_b_b2, "EEEEC10A", "chunk_004"))
-
-
-#%% Dataset C1
-
-base_path_c_c1 = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_splits\c\c1'
-
-df_results_c_c1 = process_chunks(base_path_c_c1, 1)
-plot_dsc_statistics(df_results_c_c1, 'dataset C1')
-
-
-# plot_segmentation(base_path_b_b1, "EECFD59B", "chunk_001")
-# print(get_dsc_for_scan(base_path_b_b1, "EECFD59B", "chunk_001"))
-
-#%% Dataset C2
-
-base_path_c_c2 = r'\\vf-DataSafe\DataSafe$\Div0\ict\Algoritme CT_2971\data_splits\c\c2'
-
-df_results_c_c2 = process_chunks(base_path_c_c2, 1)
-plot_dsc_statistics(df_results_c_c2, 'dataset C2')
-
-
-# plot_segmentation(base_path_b_b1, "EECFD59B", "chunk_001")
-# print(get_dsc_for_scan(base_path_b_b1, "EECFD59B", "chunk_001"))
 
 
 #%% Plot 
