@@ -9,8 +9,6 @@ In deze repositroy zijn de python scripts te vinden die gebruikt zijn voor het e
 
 /statistics bevat alle pythonscripts voor het toepassen en het weergeven van de statistische toetsen. De gebruikte packages zijn te vindein in env-analysis.yml .
 
-//
-//
-referenties
+## referenties
 1. Paris MT, Mourtzakis M. Automated body composition analysis of clinically acquired computed tomography scans using neural networks. Clin Nutr. 2020;39(10):3049–3055.
 2. Cabini RF, Cozzi A, Coppola F, Morganti S, et al. CompositIA: an open-source automated quantification tool for body composition scores from thoraco-abdominal CT scans. Eur Radiol Exp. 2025;9:12. https://doi.org/10.1186/s41747-025-00552-7
