@@ -53,16 +53,14 @@ def icc3(csv_path, value_suffix='hu'):
 
 
 #%% oppervlakte 
-csv_file = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia/area_compo_a_12juni.csv' #Pas aan voor subset
-#csv_file = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/automatica/area_automatica_a_12juni.csv'
+csv_file =  path...
 
 value_suffix = 'mm2'
 icc3_result = icc3(csv_file, value_suffix)
 
 #%% weefseldichtheid
 
-csv_file = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia/hu_compo_a_12juni.csv' #Pas aan voor subset
-#csv_file = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/automatica/hu_automatica_a_12juni.csv'
+csv_file =  path...
 
 value_suffix = 'hu'
 icc3_result = icc3(csv_file)
