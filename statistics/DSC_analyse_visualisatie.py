@@ -7,8 +7,8 @@ import os
 
 #%% DSC mediaan, IQR en P10 berekenen.
 
-csv_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia/dsc_compo_b2_12juni.csv'
-out_dir = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia'
+csv_path = path...
+out_dir = path...
 
 filename = 'DSC_percentielen_A.csv'  
 df = pd.read_csv(csv_path)
