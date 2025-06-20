@@ -7,7 +7,7 @@ import os
 #%% Shapiro-Wilk-toets
 
 
-base_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/automatica'
+base_path =  path...
 file_path = os.path.join(base_path, 'area_automatica_b2_12juni.csv')  #Pas aan voor subset
 subset = 'b2'  
 
@@ -51,9 +51,8 @@ print(resultaten_df.to_string(index=False))
 
 #%% Mann-Whitney-U-toets
 
-base_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/automatica'
-df_b1 = pd.read_csv(os.path.join(base_path, 'dsc_automatica_b1_12juni.csv'))  # Pas aan voor subset
-df_b2 = pd.read_csv(os.path.join(base_path, 'dsc_automatica_b2_12juni.csv')) 
+base_path =  path...
+df_b1 = pd.read_csv(os.path.join(base_path, 'dsc_automatica_b1_12juni.csv')) 
 
 weefsels = ['VAT', 'SM', 'SAT']
 alpha = 0.05
