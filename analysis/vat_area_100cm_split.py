@@ -4,10 +4,10 @@ import numpy as np
 import pydicom
 import csv
 
-ori_dir = 
-tagged_dir = 
+ori_dir = path ...
+tagged_dir = path ...
 
-output_base =
+output_base = path ...
 subsets = ['b0', 'b1', 'b2']
 
 for subset in subsets:
