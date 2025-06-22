@@ -33,7 +33,6 @@ def icc3(csv_path, value_suffix='hu'):
                 auto_col: "auto"
             })
 
-            # Bereken ICC(3,1)
             icc = pg.intraclass_corr(data=df_long,
                                      targets="scan_id",
                                      raters="rater",
@@ -48,7 +47,6 @@ def icc3(csv_path, value_suffix='hu'):
         print(result_df[["weefsel", "ICC", "CI95%", "F", "pval"]])
         return result_df
     else:
-        print("Geen weefsels met geldige kolommen gevonden.")
         return pd.DataFrame()
 
 
