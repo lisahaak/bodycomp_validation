@@ -65,5 +65,3 @@ with open(csv_path, 'w', newline='') as csvfile:
     writer.writerow(['scan_id', 'VAT_area_mm2', 'subset'])
     for base, info in vat_info.items():
         writer.writerow([base, f"{info['VAT_area_mm2']:.2f}", info['subset']])
-
-print(f"All done. Summary saved to {csv_path}")
