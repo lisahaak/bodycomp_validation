@@ -58,7 +58,7 @@ for base in common_bases:
         print(f"{base}: {vat_area_mm2:.2f} mm² → {subset}")
 
     except Exception as e:
-        print(f" Error with scan {base}: {e}")
+        print(f" Fout bij scan {base}: {e}")
 
 csv_path = os.path.join(output_base, 'vat_areas_and_subsets.csv')
 with open(csv_path, 'w', newline='') as csvfile:
