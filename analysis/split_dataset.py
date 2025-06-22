@@ -53,6 +53,4 @@ for split, records in split_indices.items():
     for base, tag_file, ori_file in records:
         shutil.copy2(os.path.join(input_tagged, tag_file), os.path.join(output_dirs[split]['tagged_manual'], tag_file))
         shutil.copy2(os.path.join(input_ori, ori_file), os.path.join(output_dirs[split]['original_l3'], ori_file))
-    print(f"Copied {len(records)} pairs to split '{split}'")
-
-print("Dataset successfully split into b2val, b2train.")
+    print(f"{len(records)} gekopieerd naar '{split}'")
