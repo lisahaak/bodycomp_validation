@@ -18,15 +18,6 @@ module load tools/miniconda/python3.9
 # Activate the correct conda environment
 source activate env_compositia_py39
 
-# Debugging GPU availability
-echo "===== NVIDIA-SMI OUTPUT ====="
-nvidia-smi || echo "No GPU available"
-echo "============================="
-
-echo "===== TensorFlow GPU DETECTION ====="
-python -c "import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))"
-echo "===================================="
-
 # Change to working directory
 cd /home/jjkool/bep/compositIA/
 
