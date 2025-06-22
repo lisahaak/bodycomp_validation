@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 
 
-#%% Bland-Altman-Plots
+#%% Bland-Altman-Analyse
 
 def bland_altman_plot(ax, data, manual_col, auto_col, tissue_type, model, dataset, title_label, y_limits=None, x_limits=None, unit_label=""):
     avg = (data[manual_col] + data[auto_col]) / 2
@@ -25,7 +25,6 @@ def bland_altman_plot(ax, data, manual_col, auto_col, tissue_type, model, datase
     ax.grid(True)
     ax.tick_params(axis='both', labelsize=14)  
 
-    # Format getallen op assen
     ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x:.0f}"))
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: f"{y:.0f}"))
 
@@ -68,10 +67,6 @@ def run_bland_altman_plot(csv_path, value_suffix, model, dataset, title_label, y
                 global_xmin = min(global_xmin, avg.min())
                 global_xmax = max(global_xmax, avg.max())
                 subset_data[tissue] = subset
-            else:
-                print(f"Waarschuwing: Geen gegevens voor {tissue} na het verwijderen van NaN-waarden.")
-        else:
-            print(f"Waarschuwing: Kolommen voor {tissue} niet gevonden: {manual_col}, {auto_col}")
 
     y_padding = 0.05 * (global_ymax - global_ymin) if global_ymax > global_ymin else 1
     x_padding = 0.05 * (global_xmax - global_xmin) if global_xmax > global_xmin else 1
@@ -124,7 +119,7 @@ run_bland_altman_plot(
     title_label='oppervlakte',
     y_label='Verschil in oppervlakte (automatisch - handmatig) (cm$^2$)', 
     x_label='Gemiddelde oppervlakte van handmatige en automatische segmentatie (cm$^2$)',
-    output_dir = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/plots_automatica',
+    output_dir = path...
 )
 
 #%% Compositia oppervlakte
@@ -137,7 +132,7 @@ run_bland_altman_plot(
     title_label='oppervlakte',
     y_label='Verschil in oppervlakte (automatisch - handmatig) (cm$^2$)', 
     x_label='Gemiddelde oppervlakte van handmatige en automatische segmentatie (cm$^2$)',
-    output_dir = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/plots_compositia',
+    output_dir = path...
 )
 
 #%% Automatica weefseldichtheid
@@ -150,10 +145,10 @@ run_bland_altman_plot(
     title_label='weefseldichtheid',
     y_label='Verschil in weefseldichtheid (automatisch - handmatig) (HU)',
     x_label='Gemiddelde weefseldichtheid van handmatige en automatische segmentatie (HU)',
-    output_dir = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/plots_automatica',
+    output_dir = path...
 )
 
-#%% Compositia oppervlakte 
+#%% Compositia weefseldichtheid 
 
 run_bland_altman_plot(
     csv_path = path ...,
@@ -163,5 +158,5 @@ run_bland_altman_plot(
     title_label='weefseldichtheid',
     y_label='Verschil in weefseldichtheid (automatisch - handmatig) (HU)',
     x_label='Gemiddelde weefseldichtheid van handmatige en automatische segmentatie (HU)',
-    output_dir = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/plots_compositia',
+    output_dir = path...
 )
