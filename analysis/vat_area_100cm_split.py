@@ -28,7 +28,6 @@ for base in common_bases:
     tag_path = os.path.join(tagged_dir, tagged_bases[base])
 
     try:
-        # Read DICOM and get pixel spacing
         dicom_data = pydicom.dcmread(dicom_path)
         image = dicom_data.pixel_array
         pixel_spacing = dicom_data.PixelSpacing
