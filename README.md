@@ -33,7 +33,7 @@ Bevat Python-scripts voor het uitvoeren en visualiseren van statistische toetsen
 
 ## Referenties
 
-1. Paris MT, Mourtzakis M. Automated body composition analysis of clinically acquired computed tomography scans using neural networks. *Clinical Nutrition*. 2020;39(10):3049–3055.  
-2. Cabini RF, Cozzi A, Coppola F, Morganti S, et al. CompositIA: an open-source automated quantification tool for body composition scores from thoraco-abdominal CT scans. *European Radiology Experimental*. 2025;9:12. https://doi.org/10.1186/s41747-025-00552-7
+1. Paris MT, Mourtzakis M. Automated body composition analysis of clinically acquired computed tomography scans using neural networks. *Clinical Nutrition*. 2020;39(10):3049–3055. doi: 10.1016/j.clnu.2020.01.008.
+2. Cabini RF, Cozzi A, Coppola F, Morganti S, et al. CompositIA: an open-source automated quantification tool for body composition scores from thoraco-abdominal CT scans. *European Radiology Experimental*. 2025;9:12. doi: 10.1186/s41747-025-00552-7.
 
 
