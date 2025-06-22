@@ -44,7 +44,7 @@ summary_stats.to_csv(output_path)
 
 #%% Boxplots voor visualisatie van DSC 
 
-csv_path = 'C:/Users/jjkool/Documents/BEP/pythonscripts/statistiek/compositia/dsc_compo_b2_12juni.csv'
+csv_path = path...
 
 def boxplot(df, dataset_name):
     tissues = ['VAT', 'SM', 'SAT']
