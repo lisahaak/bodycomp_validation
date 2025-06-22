@@ -35,12 +35,11 @@ for tag_file in tagged_files:
     if base in ori_map:
         valid_pairs.append((base, tag_file, ori_map[base]))
     
-
-print(f"Found {len(valid_pairs)} valid base file pairs")
+print(f"{len(valid_pairs)} pairs gevonden")
 
 total_required = sum(split_sizes.values())
 if len(valid_pairs) < total_required:
-    raise ValueError(f"Only {len(valid_pairs)} matching file pairs found, but {total_required} needed.")
+    raise ValueError(f"{len(valid_pairs)} pairs gevonden, maar {total_required} nodig.")
 
 random.seed(42)
 random.shuffle(valid_pairs)
