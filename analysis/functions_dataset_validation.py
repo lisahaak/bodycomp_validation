@@ -277,10 +277,6 @@ def process_scans_hu(base_path, ground_truth='manual', test_set='automatica'):
     scan_ids = [f[:-4] for f in os.listdir(original_dir) if f.endswith('.dcm')]
     loader = load_auto_masks_automatica if test_set == 'automatica' else load_auto_masks_compo if test_set == 'compo' else None
 
-    if loader is None:
-        print(f"Unknown test_set: {test_set}")
-        return pd.DataFrame()
-
     for scan_id in scan_ids:
         dicom_fp, tag_fp, png_auto_fp, png_compo_fp = get_file_paths(base_path, scan_id)
         test_fp = png_auto_fp if test_set == 'automatica' else png_compo_fp
