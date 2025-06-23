@@ -74,7 +74,6 @@ def mann_whitney_u_toets(df_b1, df_b2, weefsels):
 
     return pd.DataFrame(results)
 
-# Voer de test uit en druk het resultaat af
 resultaten_df = mann_whitney_u_toets(df_b1, df_b2, weefsels)
 
 print("\nMann-Whitney-U-toets resultaten:")
