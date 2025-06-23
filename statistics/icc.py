@@ -23,7 +23,6 @@ def icc3(csv_path, value_suffix='hu'):
         if manual_col in df.columns and auto_col in df.columns:
             df_tissue = df[["scan_id", manual_col, auto_col]].dropna()
 
-            # Zet om naar long format
             df_long = pd.melt(df_tissue, id_vars="scan_id",
                               value_vars=[manual_col, auto_col],
                               var_name="rater", value_name="score")
